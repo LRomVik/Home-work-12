@@ -31,7 +31,7 @@ int main()
     int k = 4;
 
     if (isKPeriodic(str, len, k))
-        std::cout << "Кратна - " << k;
+        std::cout << "Multiple - " << k;
     else
-        std::cout << "Не кратна - " << k;
+        std::cout << "Non-multiple - " << k;
 }
