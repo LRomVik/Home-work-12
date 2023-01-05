@@ -25,7 +25,6 @@ bool isKPeriodic(const char* str, int len, int k)
 
 int main()
 {
-    setlocale(LC_ALL,"");
     const char *str = "abcdabcdabcdabcdabcd";
     int len = strlen(str);
     int k = 4;
