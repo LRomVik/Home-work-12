@@ -1,36 +1,13 @@
-#include<iostream>
-#include <cstring>
+#include <iostream>
+#include "multiply.h"
 
-bool isPrefix(const char* str, int len, int i, int k)
-{
-    if (i + k > len)
-        return false;
-    for (int j = 0; j < k; j++)
-    {
+int main(){
+    std::string txt = "abcdefgabcdefg";
 
-        if (str[i] != str[j])
-            return false;
-        i++;
+    for (size_t k = 1; k <= 100; ++k) {
+        if (IsKPeriodic(txt, k)) {
+            std::cout << "The text is multiply - " << k << std::endl;
+        }
     }
-    return true;
-}
-
-bool isKPeriodic(const char* str, int len, int k)
-{
-    for (int i = k; i < len; i += k)
-        if (!isPrefix(str, len, i, k))
-            return false;
-    return true;
-}
-
-int main()
-{
-    const char *str = "abcdabcdabcdabcdabcd";
-    int len = strlen(str);
-    int k = 4;
-
-    if (isKPeriodic(str, len, k))
-        std::cout << "Multiple - " << k;
-    else
-        std::cout << "Non-multiple - " << k;
+    return 0;
 }
